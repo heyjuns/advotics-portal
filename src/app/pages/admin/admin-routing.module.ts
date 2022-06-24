@@ -5,7 +5,13 @@ import { AdminComponent } from './admin.component';
 const routes: Routes = [
   {
     path: '',
-    component: AdminComponent
+    component: AdminComponent,
+    children: [
+      {
+        path: 'market-insight',
+        loadChildren: () => import('./market-insight/market-insight.module').then(m => m.MarketInsightModule)
+      },
+    ]
   }];
 
 @NgModule({
