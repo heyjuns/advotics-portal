@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 interface IBasicRoute {
   url: string;
   label: string;
@@ -7,10 +7,12 @@ interface IBasicRoute {
 const BASE_ICON_PATH = './assets'
 
 @Component({
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class DashboardComponent implements OnInit {
+export class SidebarComponent implements OnInit {
 
   pages: IBasicRoute[] = [
     {
@@ -21,7 +23,7 @@ export class DashboardComponent implements OnInit {
     {
       url: 'report',
       label: 'Report',
-      iconPath:`${BASE_ICON_PATH}/report.svg`
+      iconPath: `${BASE_ICON_PATH}/report.svg`
     }
   ]
   constructor() { }

@@ -1,0 +1,15 @@
+<div class="flex flex-col w-full px-4 py-8 overflow-y-auto border-b lg:border-r lg:h-screen lg:w-64">
+  <div class="flex flex-col justify-between mt-6">
+    <aside>
+      <ul>
+        <li *ngFor="let page of pages" class="mb-4">
+          <a class="flex items-center px-4 py-2 text-gray-700 bg-gray-100 rounded-md " [routerLink]="page.url"
+            routerLinkActive="active">
+            <img class="w-6 h-6" fill="none" viewBox="0 0 24 24" [src]="page.iconPath" alt="">
+            <span class="mx-4">{{page.label}}</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+</div>
