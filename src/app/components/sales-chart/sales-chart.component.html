@@ -1,0 +1,29 @@
+<div class="w-[100vh] h-full bg-white border">
+  <div class="flex-grow p-5">
+    <div class="flex justify-between items-start">
+      <div>
+        <div class="flex">
+          <div class="inline-flex text-gray-400 ">
+            <h2 class="justify-center">{{title}}</h2>
+          </div>
+        </div>
+      </div>
+      <div class="relative inline-flex flex-shrink-0 space-x-4">
+        <mat-form-field appearance="fill">
+          <mat-select [value]="selectedRange">
+            <mat-option *ngFor="let range of rangeOptions" [value]="range.value">
+              {{range.label}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button class="text-gray-400 hover:text-gray-500 rounded-full focus:outline-none focus-within:ring-2"
+          aria-haspopup="true">
+          <img class="w-5 h-5 text-[#727272]" src="./assets/more.svg" alt="">
+
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</div>

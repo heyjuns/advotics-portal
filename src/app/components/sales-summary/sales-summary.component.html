@@ -1,0 +1,40 @@
+<section class="max-w-sm bg-white shadow-lg rounded-sm border border-gray-200">
+  <div class="flex flex-col h-full">
+    <div class="flex-grow p-5">
+      <div class="flex justify-between items-start">
+        <div>
+          <div class="flex ">
+            <div class="inline-flex text-gray-400 ">
+              <h2 class="justify-center">{{title}}</h2>
+            </div>
+          </div>
+        </div>
+        <div class="relative inline-flex flex-shrink-0">
+          <button class="text-gray-400 hover:text-gray-500 rounded-full focus:outline-none focus-within:ring-2"
+            aria-haspopup="true">
+            <span class="sr-only">Menu</span>
+            <img class="w-5 h-5 text-[#727272]" src="./assets/more.svg" alt="">
+
+          </button>
+
+        </div>
+      </div>
+      <div class="mt-2 flex justify-start">
+        <div class="">
+          <div class="font-bold text-xl text-gray-700">Rp. {{price | number}}</div>
+          <div class="text-sm">
+            <span class="text-red-500">
+              <img class="w-5 h-5 inline" src="./assets/bottom-trend.svg" alt="">
+              {{percentage}}%
+            </span>
+            Last Period in products sold
+          </div>
+        </div>
+        <div>
+          <img class="w-14 ml-2" src="./assets/cart.svg" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

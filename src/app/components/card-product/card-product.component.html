@@ -1,0 +1,19 @@
+<div class="flex font-sans bg-white rounded-md border hover:bg-[#FFE7BD]">
+  <div class="flex-none w-28 relative">
+    <img [src]="product.imgPath" alt="product-image"
+      class="absolute inset-0 w-full h-full rounded-tl-md rounded-bl-md object-cover" loading="lazy" />
+  </div>
+  <div class="flex-auto px-2 py-4">
+    <div class="flex flex-wrap">
+      <div class="w-full flex-none text-xl font-medium text-slate-700 mb-2">
+        {{product.name}}
+      </div>
+      <div class="flex-auto text-md font-semibold text-slate-900">
+        Rp. {{product.price |number}}
+      </div>
+      <div class="text-sm font-semibold text-slate-500">
+        [{{product.soldQty | number}} pcs]
+      </div>
+    </div>
+  </div>
+</div>

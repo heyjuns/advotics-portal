@@ -1,3 +1,4 @@
+import { SharedModule } from 'src/app/components/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +12,8 @@ import { MarketInsightComponent } from './market-insight.component';
   ],
   imports: [
     CommonModule,
-    MarketInsightRoutingModule
+    MarketInsightRoutingModule,
+    SharedModule,
   ]
 })
 export class MarketInsightModule { }
