@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
     {
       url: 'report',
       label: 'Report',
-      iconPath: `${BASE_ICON_PATH}/report.svg`
+      iconPath: `${BASE_ICON_PATH}/market.svg`
     }
   ]
   constructor() { }
