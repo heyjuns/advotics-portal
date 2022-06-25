@@ -1,4 +1,4 @@
-<div class="w-[100vh] h-full bg-white border">
+<div class="w-[100vh] h-full bg-white border shadow-xl">
   <div class="flex-grow p-5">
     <div class="flex justify-between items-start">
       <div>
@@ -25,5 +25,13 @@
       </div>
     </div>
 
+  </div>
+
+  <!--The content below is only a placeholder and can be replaced.-->
+  <div id="chart" class="px-4">
+    <apx-chart [series]="chartOptions.series!" [chart]="chartOptions.chart!" [yaxis]="chartOptions.yaxis!"
+      [xaxis]="chartOptions.xaxis!" [labels]="chartOptions.labels!" [stroke]="chartOptions.stroke"
+       [dataLabels]="chartOptions.dataLabels" [fill]="chartOptions.fill!"
+      [tooltip]="chartOptions.tooltip!"></apx-chart>
   </div>
 </div>
