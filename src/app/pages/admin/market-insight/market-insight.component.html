@@ -1,33 +1,36 @@
-<section class="flex justify-between mb-8">
-  <div>
-    <h1 class="text-4xl text-[#707070C4]">Dashboard</h1>
-  </div>
-  <div>
-    <div class="bg-red-900 block min-w-full">KOMPONEN DATE</div>
-  </div>
-</section>
-<div class="space-y-6">
-  <section class="bg-[#37B04C] min-w-full py-2 px-4 text-xl text-white">
-    <div class="flex justify-between items-center">
-      <div>
-        MARKET INSIGHT
-      </div>
-      <div class="underline text-sm cursor-pointer">
-        <img class="w-5 h-5 inline fill-white" src="./assets/help.svg" alt="">
-        Click Here for Help
-        <img class="w-6 h-6 inline fill-white ml-2" src="./assets/up.svg" alt="">
-      </div>
+<div class="mb-8">
+
+  <section class="flex justify-between mb-8">
+    <div>
+      <h1 class="text-4xl text-[#707070C4]">Dashboard</h1>
     </div>
-
+    <div>
+      <div class="bg-red-900 block min-w-full">KOMPONEN DATE</div>
+    </div>
   </section>
+  <div class="space-y-6">
+    <section class="bg-[#37B04C] min-w-full py-2 px-4 text-xl text-white">
+      <div class="flex justify-between items-center">
+        <div>
+          MARKET INSIGHT
+        </div>
+        <div class="underline text-sm cursor-pointer">
+          <img class="w-5 h-5 inline fill-white" src="./assets/help.svg" alt="">
+          Click Here for Help
+          <img class="w-6 h-6 inline fill-white ml-2" src="./assets/up.svg" alt="">
+        </div>
+      </div>
 
-  <section>
-    <app-sales-summary title="Sales Turnover" [price]="3_600_000" percentage="40.8"></app-sales-summary>
-  </section>
+    </section>
 
-  <section class="flex flex-row gap-5">
-    <app-sales-chart class="flex-grow" title="AVERAGE PURCHASE VALUE"></app-sales-chart>
-    <app-list-card-product title="BEST SELLING SKU" [products]="listOfBestSellingSKU"></app-list-card-product>
-    <app-list-card-product title="TOP COMPETITOR SKU" [products]="listOfTopCompetitorSKU"></app-list-card-product>
-  </section>
+    <section>
+      <app-sales-summary title="Sales Turnover" [price]="3_600_000" percentage="40.8"></app-sales-summary>
+    </section>
+
+    <section class="flex flex-row gap-5">
+      <app-sales-chart class="flex-grow" title="AVERAGE PURCHASE VALUE"></app-sales-chart>
+      <app-list-card-product title="BEST SELLING SKU" [products]="listOfBestSellingSKU"></app-list-card-product>
+      <app-list-card-product title="TOP COMPETITOR SKU" [products]="listOfTopCompetitorSKU"></app-list-card-product>
+    </section>
+  </div>
 </div>
