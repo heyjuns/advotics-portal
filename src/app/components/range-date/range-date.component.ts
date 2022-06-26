@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./range-date.component.css']
 })
 export class RangeDateComponent implements OnInit {
-
+  fromDate: Date = new Date();
+  endDate: Date = new Date();
   constructor() { }
 
   ngOnInit() {
