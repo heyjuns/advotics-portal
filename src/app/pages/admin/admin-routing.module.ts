@@ -4,6 +4,11 @@ import { AdminComponent } from './admin.component';
 
 const routes: Routes = [
   {
+    path:'',
+    pathMatch:'full',
+    redirectTo:'market-insight'
+  },
+  {
     path: '',
     component: AdminComponent,
     children: [

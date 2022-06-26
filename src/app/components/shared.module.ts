@@ -1,3 +1,4 @@
+import { RangeDateComponent } from './range-date/range-date.component';
 import { SalesChartComponent } from './sales-chart/sales-chart.component';
 import { CardProductComponent } from './card-product/card-product.component';
 import { ListCardProductComponent } from './list-card-product/list-card-product.component';
@@ -26,6 +27,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     ListCardProductComponent,
     CardProductComponent,
     SalesChartComponent,
+    RangeDateComponent,
   ],
   exports: [
     NavbarComponent,
@@ -34,6 +36,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     ListCardProductComponent,
     CardProductComponent,
     SalesChartComponent,
+    RangeDateComponent,
   ]
 })
 export class SharedModule { }

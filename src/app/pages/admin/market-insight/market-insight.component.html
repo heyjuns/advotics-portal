@@ -5,7 +5,9 @@
       <h1 class="text-4xl text-[#707070C4]">Dashboard</h1>
     </div>
     <div>
-      <div class="bg-red-900 block min-w-full">KOMPONEN DATE</div>
+      <div>
+        <app-range-date></app-range-date>
+      </div>
     </div>
   </section>
   <div class="space-y-6">
@@ -27,7 +29,7 @@
       <app-sales-summary title="Sales Turnover" [price]="3_600_000" percentage="40.8"></app-sales-summary>
     </section>
 
-    <section class="flex flex-row gap-5">
+    <section class="flex flex-col md:flex-row gap-5">
       <app-sales-chart class="flex-grow" title="AVERAGE PURCHASE VALUE"></app-sales-chart>
       <app-list-card-product title="BEST SELLING SKU" [products]="listOfBestSellingSKU"></app-list-card-product>
       <app-list-card-product title="TOP COMPETITOR SKU" [products]="listOfTopCompetitorSKU"></app-list-card-product>
