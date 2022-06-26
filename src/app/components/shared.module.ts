@@ -1,3 +1,4 @@
+import { DatepickerComponent } from './datepicker/datepicker.component';
 import { RangeDateComponent } from './range-date/range-date.component';
 import { SalesChartComponent } from './sales-chart/sales-chart.component';
 import { CardProductComponent } from './card-product/card-product.component';
@@ -28,6 +29,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     CardProductComponent,
     SalesChartComponent,
     RangeDateComponent,
+    DatepickerComponent,
   ],
   exports: [
     NavbarComponent,
@@ -37,6 +39,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     CardProductComponent,
     SalesChartComponent,
     RangeDateComponent,
+    DatepickerComponent,
   ]
 })
 export class SharedModule { }

@@ -1,3 +1,4 @@
+import { AngularMaterialModule } from './../../angular-material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +15,7 @@ import { SharedModule } from 'src/app/components/shared.module';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
+    AngularMaterialModule,
   ]
 })
 export class AdminModule { }

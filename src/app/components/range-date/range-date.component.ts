@@ -1,3 +1,5 @@
+import { DatepickerComponent } from './../datepicker/datepicker.component';
+import { Dialog } from '@angular/cdk/dialog';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class RangeDateComponent implements OnInit {
   fromDate: Date = new Date();
   endDate: Date = new Date();
-  constructor() { }
 
   ngOnInit() {
+  }
+
+  constructor(public dialog: Dialog) { }
+
+  openDatepicker() {
+    this.dialog.open(DatepickerComponent, {
+      data: {
+        fromDate: this.fromDate,
+        endDate: this.endDate,
+      },
+    });
   }
 
 }
