@@ -6,7 +6,7 @@ import { ListCardProductComponent } from './list-card-product/list-card-product.
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -20,6 +20,7 @@ import { NgApexchartsModule } from "ng-apexcharts";
     RouterModule,
     AngularMaterialModule,
     NgApexchartsModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     NavbarComponent,

@@ -17,12 +17,14 @@ export class RangeDateComponent implements OnInit {
   constructor(public dialog: Dialog) { }
 
   openDatepicker() {
-    this.dialog.open(DatepickerComponent, {
+    let dialogRef = this.dialog.open(DatepickerComponent, {
       data: {
         fromDate: this.fromDate,
         endDate: this.endDate,
       },
     });
+  
+    
   }
 
 }

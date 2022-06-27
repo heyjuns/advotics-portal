@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { DateRange, MatCalendar, MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER } from '@angular/material/datepicker';
 type IPresetDate = 0 | -1 | -7 | -30 | 'month' | 'custom';
 interface IDateRange {
   label: string;
@@ -7,7 +9,8 @@ interface IDateRange {
 @Component({
   selector: 'app-datepicker',
   templateUrl: './datepicker.component.html',
-  styleUrls: ['./datepicker.component.css']
+  styleUrls: ['./datepicker.component.css'],
+  providers: [MAT_RANGE_DATE_SELECTION_MODEL_PROVIDER]
 })
 export class DatepickerComponent implements OnInit {
   @Input() fromDate!: Date;
@@ -38,7 +41,32 @@ export class DatepickerComponent implements OnInit {
       value: 'custom',
     },
   ]
-  constructor() { }
+
+  selectedDateRange!: DateRange<Date>;
+  selectDateType!: string;
+  constructor(
+  ) {
+    this.selectedDateRange = new DateRange(this.fromDate, this.endDate)
+  }
+  toggleStartDateDate(date: Date, calendar: MatCalendar<Date>) {
+    const selected_date = date;
+    if (this.selectDateType === "startDateAfter") {
+      this.fromDate = selected_date
+      this.endDate = selected_date
+      this.selectDateType = "startDateBefore"
+    } else {
+      if (date < this.fromDate) {
+        this.fromDate = selected_date
+        this.endDate = selected_date
+        this.selectDateType = "startDateBefore"
+      } else {
+        this.endDate = selected_date
+        this.selectDateType = "startDateAfter"
+      }
+    }
+    this.selectedDateRange = new DateRange(this.fromDate, this.endDate)
+    calendar.updateTodaysDate();
+  }
 
   ngOnInit() {
   }
@@ -48,6 +76,5 @@ export class DatepickerComponent implements OnInit {
 
   }
   applyDate() {
-
   }
 }
