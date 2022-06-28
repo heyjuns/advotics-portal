@@ -13,10 +13,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { SalesSummaryComponent } from './sales-summary/sales-summary.component';
 import { AngularMaterialModule } from '../angular-material.module';
 import { NgApexchartsModule } from "ng-apexcharts";
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
+    NgxDaterangepickerMd.forRoot(),
     RouterModule,
     AngularMaterialModule,
     NgApexchartsModule,
